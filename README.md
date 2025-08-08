@@ -85,3 +85,46 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
+# MCP Session Code
+
+This repository contains various MCP (Model Context Protocol) server implementations and a LangGraph application that interacts with them.
+
+## Environment Setup
+
+To run the LangGraph application, you need to create a `.env` file in the root directory with the following variables:
+
+```bash
+# OpenAI API Key (required for LangGraph agent)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Metals API Key (required for metals.py server)
+METALS_DEV_API_KEY=your_metals_api_key_here
+```
+
+## Files
+
+- `metals.py` - MCP server for getting metal prices
+- `metals_langgraph.py` - Interactive LangGraph application
+- `metals_langgraph_simple.py` - Simple LangGraph demonstration
+- `dice_roller.py` - MCP server for rolling dice
+- `server.py` - General MCP server example
+
+## Usage
+
+1. Install dependencies:
+   ```bash
+   uv sync
+   ```
+
+2. Create a `.env` file with your API keys
+
+3. Run the LangGraph application:
+   ```bash
+   python metals_langgraph.py
+   ```
+
+   Or run the simple demonstration:
+   ```bash
+   python metals_langgraph_simple.py
+   ```

@@ -1,11 +1,19 @@
 from fastmcp import Client
 
+# async def main():
+#     # Connect via stdio to a local script
+#     async with Client("server.py") as client:
+#         tools = await client.list_tools()
+#         print(f"Available tools: {tools}")
+#         result = await client.call_tool("web_search", {"query": "What is the capital of France?"})
+#         print(f"Result: {result}")
+
 async def main():
     # Connect via stdio to a local script
-    async with Client("server.py") as client:
+    async with Client("metals.py") as client:
         tools = await client.list_tools()
         print(f"Available tools: {tools}")
-        result = await client.call_tool("web_search", {"query": "What is the capital of France?"})
+        result = await client.call_tool("get_metal_price", {"metal": "silver"})
         print(f"Result: {result}")
 
 if __name__ == "__main__":
